@@ -1,0 +1,42 @@
+{include file='_header'}
+<div class="page-header">当前位置：<span class="text-primary">网站模板设置</span></div>
+<div class="page-content">
+    <div class="alert alert-primary">
+        <h4 style="font-weight: 500">模板配置说明</h4>
+        <p>模板更换后如果出现前端页面访问不了，请重新设置栏目。</p>
+        <p>启用另一套模板后，如果前台没变化，请先清除缓存。</p>
+    </div>
+    <form method="post" class="form form-horizontal" action="edit">
+        <div class="tabs-wrapper">
+            <ul class="nav nav-tabs">
+                <li {if empty($t) || $t == 'pc'}class="active"{/if}><a href="{:url('admin/sysset/themes',array('t'=>'pc'))}"><span>PC端模板</span></a></li>
+                <li {if $t == 'mobile'}class="active"{/if}><a href="{:url('admin/sysset/themes',array('t'=>'mobile'))}"><span>手机端模板</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active">
+                    <div class="row">
+                        {foreach name="template_config" key="k" item="item"}
+                        <div class="col-sm-4 col-md-3">
+                            <div class="thumbnail">
+                                <img src="/template/{$t}/{$k}/{$item['img']}" alt="{$item['name']}" class="img-rounded" style="width: 100%;height: 245px;">
+                                <div class="caption">
+                                    <h4>{$item['name']}</h4>
+                                    <p>{$item['remark']}</p>
+                                    <p class="text-right">
+                                        {if $default_theme == $k}
+                                        <button class="btn btn-danger btn-block" disabled>已启用</button>
+                                        {else/}
+                                        <a class="btn btn-primary btn-block ajax-get" data-toggle="ajaxPost" href="{:url('admin/sysset/setthemes?id='.$k . '&t=' . $t)}" data-confirm="确认启用此模板吗？">启用</a>
+                                        {/if}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {/foreach}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{include file='_footer'}     

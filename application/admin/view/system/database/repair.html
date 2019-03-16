@@ -1,0 +1,39 @@
+<div class="alert we7-page-alert" style="margin-bottom:0">
+	<i class="wi wi-info-sign"></i><strong>数据表修复.</strong>
+</div>
+<input type="hidden" name="do" value="repair" />
+<br>		
+{if count($list) > 0}
+<table class="table we7-table table-hover site-list">
+	<col width="30px"/>
+	<col width="100px"/>
+	<col width="50px"/>
+	<col width="50px"/>
+	<col width="80px"/>
+	<col width="80px"/>
+	<col width="80px"/>
+	<tr>
+		<th>操作</th>
+		<th>表名</th>
+		<th>数据量</th>
+		<th>数据大小</th>
+		<th>创建时间</th>
+	</tr>
+	{foreach name='list' item='row'}
+	<tr>
+		<td><input type="checkbox" name="select[]" checked="checked" value="{$row['name']}"></td>
+		<td>{$row['name']}</td>
+		<td>{$row['rows']}</td>
+		<td>{$table.data_length|format_bytes}</td>
+		<td>{$table.create_time}</td>
+	</tr>
+	{/foreach}
+	<tr>
+		<td colspan="5" class="text-left">
+			<button type="submit" class="btn btn-primary span3" name="submit" value="提交">开始修复</button>
+		</td>
+	</tr>
+</table>
+{else}
+<div class="alert alert-success"><strong>没有要修复的数据表</strong></div>
+{/if}

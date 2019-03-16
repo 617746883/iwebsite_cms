@@ -1,0 +1,739 @@
+---------------------------------------------------------------
+[ 2019-03-08T09:17:35+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：1.760677s] [吞吐率：0.57req/s] [内存消耗：2,785.02kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./template/pc/default/index.html [ array (
+  0 => 'iwebsite',
+  1 => 'copyright',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007051s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.088529s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.048915s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.001060s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_column` [ RunTime:0.064304s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.022109s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 0,5 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_banner` [ RunTime:0.074109s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000530s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.002216s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000763s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_link` [ RunTime:0.057744s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_link` WHERE  (  status = 1 ) LIMIT 1 [ RunTime:0.000694s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_link` WHERE  (  status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[ 2019-03-08T09:17:37+08:00 ] 0.0.0.0 GET localhost/template/pc/default/static/img/favicon.ico
+[运行时间：0.127516s] [吞吐率：7.84req/s] [内存消耗：1,281.86kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'pc',
+    2 => 'default',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'img',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T09:17:40+08:00 ] 0.0.0.0 GET localhost/index.html
+[运行时间：0.020053s] [吞吐率：49.87req/s] [内存消耗：1,281.96kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T09:17:40+08:00 ] 0.0.0.0 GET localhost/favicon.ico
+[运行时间：0.018078s] [吞吐率：55.32req/s] [内存消耗：1,281.22kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T09:17:41+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：0.112476s] [吞吐率：8.89req/s] [内存消耗：2,606.23kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./template/pc/default/index.html [ array (
+  0 => 'iwebsite',
+  1 => 'copyright',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010518s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.013982s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000410s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.011151s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_column` [ RunTime:0.012734s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 0,5 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_banner` [ RunTime:0.011980s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_link` [ RunTime:0.011911s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_link` WHERE  (  status = 1 ) LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_link` WHERE  (  status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000251s ]
+---------------------------------------------------------------
+[ 2019-03-08T09:17:43+08:00 ] 0.0.0.0 GET localhost/column/1.html
+[运行时间：0.391725s] [吞吐率：2.55req/s] [内存消耗：2,774.89kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'column',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Column->index[ D:\phpStudy\WWW\iwebsite\application\home\controller\Column.php ]
+[ info ] [ VIEW ] ./template/pc/default/tpl_list\about.html [ array (
+  0 => 'iwebsite',
+  1 => 'copyright',
+  2 => 'path',
+  3 => 'nav',
+  4 => 'find',
+  5 => 'contentlist',
+  6 => 'pager',
+  7 => 'navlist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000575s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.024186s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.013300s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_column` [ RunTime:0.010212s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `iwebsite_column` [ RunTime:0.000262s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`description`,`photo`,`list_type`,`page_number`,`page`,`body` FROM `iwebsite_column` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT `id`,`parentid`,`name` FROM `iwebsite_column` ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_content` [ RunTime:0.045936s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_content` WHERE  (   status = 1  and columnid in (5,7,6) ) LIMIT 1 [ RunTime:0.006120s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_content` WHERE  (   status = 1  and columnid in (5,7,6) ) ORDER BY `displayorder` DESC,`id` DESC LIMIT 0,10 [ RunTime:0.000306s ]
+[ sql ] [ SQL ] SELECT `id`,`parentid` FROM `iwebsite_column` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT `id`,`parentid`,`name` FROM `iwebsite_column` ORDER BY `sort` ASC,`id` ASC [ RunTime:0.000219s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (   1  and id in (5,7,6) ) ORDER BY `sort` DESC,`id` ASC [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 0,5 [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000167s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_link` [ RunTime:0.010149s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_link` WHERE  (  status = 1 ) LIMIT 1 [ RunTime:0.000220s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_link` WHERE  (  status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000165s ]
+[ error ] [8]未定义变量: contentlist[D:\phpStudy\WWW\iwebsite\application\home\controller\Column.php:68]
+[ error ] [8]未定义变量: contentlist[D:\phpStudy\WWW\iwebsite\application\home\controller\Column.php:72]
+---------------------------------------------------------------
+[ 2019-03-08T09:17:58+08:00 ] 0.0.0.0 GET localhost/home/index/test.html
+[运行时间：0.074572s] [吞吐率：13.41req/s] [内存消耗：2,405.03kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->test[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000671s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.014718s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000221s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000147s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.012300s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000415s ]
+---------------------------------------------------------------
+[ 2019-03-08T09:18:36+08:00 ] 0.0.0.0 GET localhost/home/index/test.html
+[运行时间：0.075097s] [吞吐率：13.32req/s] [内存消耗：2,407.16kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->test[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000491s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.014814s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000233s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.010722s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000261s ]
+---------------------------------------------------------------
+[ 2019-03-08T09:37:39+08:00 ] 0.0.0.0 GET localhost/home/index/test.html
+[运行时间：0.101254s] [吞吐率：9.88req/s] [内存消耗：2,429.63kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->test[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001539s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.015167s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000296s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000228s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.012204s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000397s ]
+[ error ] [0]致命错误: Call to undefined function get()[D:\phpStudy\WWW\iwebsite\application\common.php:2705]
+---------------------------------------------------------------
+[ 2019-03-08T09:38:33+08:00 ] 0.0.0.0 GET localhost/home/index/test.html
+[运行时间：0.220953s] [吞吐率：4.53req/s] [内存消耗：2,442.78kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->test[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009927s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.020142s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.010424s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000329s ]
+[ error ] [8]Array to string conversion[D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php:30]
+---------------------------------------------------------------
+[ 2019-03-08T09:38:51+08:00 ] 0.0.0.0 GET localhost/home/index/test.html
+[运行时间：0.165659s] [吞吐率：6.04req/s] [内存消耗：2,412.02kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'home',
+    1 => 'index',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->test[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000935s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.015724s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.011863s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000281s ]
+---------------------------------------------------------------
+[ 2019-03-08T10:46:51+08:00 ] 127.0.0.1 GET 127.0.0.1/tp5/public/index.php/index/index/index
+[运行时间：0.023124s] [吞吐率：43.25req/s] [内存消耗：1,285.66kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tp5',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'index',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T10:46:52+08:00 ] 127.0.0.1 GET 127.0.0.1/favicon.ico
+[运行时间：0.017491s] [吞吐率：57.17req/s] [内存消耗：1,284.94kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://127.0.0.1/tp5/public/index.php/index/index/index',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => '127.0.0.1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T16:46:30+08:00 ] 0.0.0.0 GET localhost/
+[运行时间：0.877978s] [吞吐率：1.14req/s] [内存消耗：2,612.66kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\iwebsite\application\home\controller\Index.php ]
+[ info ] [ VIEW ] ./template/pc/default/index.html [ array (
+  0 => 'iwebsite',
+  1 => 'copyright',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003608s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.029139s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000196s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.021853s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 0 LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_column` [ RunTime:0.033185s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000281s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 0,5 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_banner` [ RunTime:0.030636s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000227s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_banner` WHERE  (  enabled = 1 ) LIMIT 1 [ RunTime:0.000162s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_banner` WHERE  (  enabled = 1 ) ORDER BY `displayorder` DESC LIMIT 0,3 [ RunTime:0.000161s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) LIMIT 1 [ RunTime:0.000188s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_column` WHERE  (  parentid = 0 and level = 1 and status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_link` [ RunTime:0.022400s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `iwebsite_link` WHERE  (  status = 1 ) LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_link` WHERE  (  status = 1 ) ORDER BY `sort` DESC LIMIT 0,5 [ RunTime:0.000170s ]
+---------------------------------------------------------------
+[ 2019-03-08T16:46:32+08:00 ] 0.0.0.0 GET localhost/template/pc/default/static/img/favicon.ico
+[运行时间：0.105276s] [吞吐率：9.50req/s] [内存消耗：1,286.26kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'template',
+    1 => 'pc',
+    2 => 'default',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'img',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T16:46:41+08:00 ] 0.0.0.0 GET localhost/admin/index/index.html
+[运行时间：0.279307s] [吞吐率：3.58req/s] [内存消耗：2,191.29kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'name' => 'login@admin',
+  'expire' => 1800000,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\iwebsite\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009618s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_admin` [ RunTime:0.065420s ]
+[ sql ] [ SQL ] UPDATE `iwebsite_admin`  SET `token`=''  WHERE  `id` = 1 [ RunTime:0.026639s ]
+---------------------------------------------------------------
+[ 2019-03-08T16:46:41+08:00 ] 0.0.0.0 GET localhost/favicon.ico
+[运行时间：0.019241s] [吞吐率：51.97req/s] [内存消耗：1,285.63kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/index/index.html',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-08T16:46:44+08:00 ] 0.0.0.0 GET localhost/admin/login/index.html
+[运行时间：0.156796s] [吞吐率：6.38req/s] [内存消耗：2,476.83kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140; PHPSESSID=gvl86h9ao3ksfj32hb9oshk1d6; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/admin/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'auto_start' => true,
+  'name' => 'login@admin',
+  'expire' => 1800000,
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpStudy\WWW\iwebsite\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\phpStudy\WWW\iwebsite/application/admin\view\login\index.html [ array (
+  0 => 'iwebsiteset',
+  1 => 'copyright',
+  2 => 'referurl',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000645s ] mysql:host=127.0.0.1;dbname=iwebsite;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_system_copyright` [ RunTime:0.015469s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_system_copyright` WHERE  `ismanage` = 1 LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `iwebsite_sysset` [ RunTime:0.019990s ]
+[ sql ] [ SQL ] SELECT * FROM `iwebsite_sysset` LIMIT 1 [ RunTime:0.000425s ]

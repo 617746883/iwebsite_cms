@@ -1,0 +1,109 @@
+<div class="modal-dialog">
+<style>
+	#selectUrl .modal-body {padding: 10px 15px;}
+	#selectUrl .tab-pane {margin-top: 5px; min-height: 400px; max-height: 400px; overflow-y: auto;}
+	#selectUrl .page-head {padding: 9px 0; margin-bottom: 8px;}
+	#selectUrl .page-head h4 {margin: 0;}
+	#selectUrl .btn {margin-bottom: 3px;}
+	#selectUrl .modal-dialog {width: 930px;}
+	#selectUrl .line {border-bottom: 1px dashed #ddd; color: #999; height: 36px; line-height: 36px;}
+	#selectUrl .line .icon {height: 35px; width: 30px; position: relative; float: left;}
+	#selectUrl .line .icon.icon-1:before {content: ""; width: 10px; height: 10px; border: 1px dashed #ccc; position: absolute; top: 12px; left: 10px;}
+	#selectUrl .line .icon.icon-2 {width: 50px;}
+	#selectUrl .line .icon.icon-2:before {content: ""; width: 10px; height: 10px; border-left: 1px dashed #ccc; border-bottom: 1px dashed #ccc; position: absolute; top: 12px; left: 20px;}
+	#selectUrl .line .icon.icon-3 {width: 60px;}
+	#selectUrl .line .icon.icon-3:before {content: ""; width: 10px; height: 10px; border-left: 1px dashed #ccc; border-bottom: 1px dashed #ccc; position: absolute; top: 12px; left: 30px;}
+	#selectUrl .line .btn-sm {float: right; margin-top: 5px; margin-right: 5px; height: 24px; line-height: 24px; padding: 0 10px;}
+	#selectUrl .line .text {display: block;}
+	#selectUrl .line .label-sm {padding: 2px 5px;}
+	#selectUrl .line.good {height: 60px; padding: 4px 0;}
+	#selectUrl .line.good .image {height: 50px; width: 50px; border: 1px solid #ccc; float: left;}
+	#selectUrl .line.good .image img {height: 100%; width: 100%;}
+	#selectUrl .line.good .text {padding-left: 60px; height: 52px;}
+	#selectUrl .line.good .text p {padding: 0; margin: 0;}
+	#selectUrl .line.good .text .name {font-size: 15px; line-height: 32px; height: 28px;}
+	#selectUrl .line.good .text .price {font-size: 12px; line-height: 18px; height: 18px;}
+	#selectUrl .line.good .btn-sm {height: 32px; padding: 5px 10px; line-height: 22px; margin-top: 9px;}
+	#selectUrl .tip {line-height: 250px; text-align: center;}
+	#selectUrl .nav-tabs > li > a {padding: 8px 20px;}
+</style>
+<div class="modal-content">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">选择链接</h4>
+    </div>
+    <div class="modal-body">
+    	<ul class="nav nav-tabs" id="selectUrlTab">
+			<li class="active"><a href="#sut_content">内容</a></li>
+			<li class=""><a href="#sut_column">栏目</a></li>
+		</ul>
+		<div class="tab-content">	
+			<div class="tab-pane active" id="sut_content">
+				<div class="input-group">
+					<input type="text" placeholder="请输入关键词进行搜索" id="select-content-kw" value="" class="form-control">
+						<span class="input-group-addon btn btn-default select-btn" data-type="content">搜索</span>
+				</div>
+				<div id="select-content-list"></div>
+			</div>
+
+			<div class="tab-pane" id="sut_column">
+				{foreach name='columns' item='column'}
+					 {if empty($column['parentid'])}
+						<div class="line">
+							<div class="icon icon-1"></div>
+							<nav title="选择" class="btn btn-default btn-sm" data-href="column?columnid={$column['id']}">选择</nav>
+							<div class="text">{$column['name']}</div>
+						</div>
+						 {foreach name='columns' item='column2'}
+						 	{if $column2['parentid']==$column['id']}
+							 	<div class="line">
+									<div class="icon icon-2"></div>
+									<nav title="选择" class="btn btn-default btn-sm" data-href="column?columnid={$column2['id']}">选择</nav>
+									<div class="text">{$column2['name']}</div>
+								</div>
+								{foreach name='columns' item='column3'}
+									 {if $column3['parentid']==$column2['id']}
+										 <div class="line">
+											<div class="icon icon-3"></div>
+											<nav title="选择" class="btn btn-default btn-sm" data-href="column?columnid={$column3['id']}">选择</nav>
+											<div class="text">{$column3['name']}</div>
+										</div>
+									 {/if}
+								{/foreach}
+						 	{/if}
+						 {/foreach}
+					{/if}
+				{/foreach}
+			</div>
+		</div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+    </div>
+    <script>
+    	$(function(){
+    		$("#selectUrl").find('#selectUrlTab a').click(function(e) {
+					$('#tab').val($(this).attr('href'));
+					e.preventDefault();
+					$(this).tab('show');
+			});
+    		$(".select-btn").click(function(){
+    			var type = $(this).data("type");
+    			var kw = $.trim($("#select-"+type+"-kw").val());
+    			if(!kw){
+    				tip.msgbox.err("请输入搜索关键字！");
+    				return;
+    			}
+    			$("#select-"+type+"-list").html('<div class="tip">正在进行搜索...</div>');
+    			$.ajax("{:url('admin/utility/selecturlquery')}", {
+	      			type: "get",
+	      			dataType: "html",
+	      			cache: false,
+	      			data: {kw:kw, type:type}
+	      		}).done(function (html) {
+	      			$("#select-"+type+"-list").html(html);
+	      		});
+    		});
+    	});
+    </script>
+</div>

@@ -1,0 +1,52 @@
+---------------------------------------------------------------
+[ 2019-03-13T14:31:59+08:00 ] 0.0.0.0 GET localhost/phpMyAdmin/
+[运行时间：0.743137s] [吞吐率：1.35req/s] [内存消耗：1,285.95kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'phpMyAdmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pma_lang=zh_CN; pma_mcrypt_iv=WfuF5jr1wCo%3D; pmaUser-1=5JhBKHQy3F0%3D; pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-13T14:31:59+08:00 ] 0.0.0.0 GET localhost/favicon.ico
+[运行时间：0.017420s] [吞吐率：57.41req/s] [内存消耗：1,285.55kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpStudy\WWW\iwebsite\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6094942208; login%40=uo4u0306tb5tcetlaoktpbca57; login%40admin=ack3ig91tf6aoolc3bkmr17140',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/phpMyAdmin/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File

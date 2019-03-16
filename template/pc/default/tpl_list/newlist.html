@@ -1,0 +1,61 @@
+{include file='_head_base'}
+{include file='_header'}
+        <!--========== END HEADER ==========-->
+
+        <!--========== PARALLAX ==========-->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="__STATIC__/img/1920x1080/01.jpg">
+            <div class="parallax-content container">
+                <h1 class="carousel-title">{$nav['name']}</h1>
+                <p>{$nav['description']}</p>
+            </div>
+        </div>
+        <!--========== PARALLAX ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- Service -->
+        <div class="bg-color-sky-light" data-auto-height="true">
+            <div class="content-lg container">
+                <div class="row row-space-1 margin-b-2">
+                    {foreach name='contentlist' item='item' key='k'}
+                    <div class="col-sm-6 sm-margin-b-2">
+                        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".{$k + 1}s">
+                            <div class="service" data-height="height">
+                                <h3>{$item['title']}</h3>
+                                <p class="margin-b-5">{$item['description']}</p>
+                                <a href="{$item['url']}" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                    </div>
+                    {/foreach}
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Service -->
+
+        <!-- General Questions -->
+        <div class="content-lg container">
+            <div class="row margin-b-20">
+                <div class="col-sm-6">
+                    <h2>常见问题/热门新闻</h2>
+                </div>
+            </div>
+            <!--// end row -->
+
+            <div class="row">
+                {iwebsite:list table="content" value="v" key="i" where='status = 1 and deleted = 0 and isrecommand = 1' order='displayorder desc' limit='1' page='false'}
+                <div class="col-sm-7 sm-margin-b-50">
+                    <div class="margin-b-30">
+                        <p>{$v['description']}</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-1">
+                    <img class="img-responsive" src="{$v['thumb']}" alt="Our Office">
+                </div>
+                {/iwebsite:list}
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End General Questions -->
+
+{include file='_footer'}

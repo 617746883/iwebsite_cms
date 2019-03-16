@@ -1,0 +1,57 @@
+{include file='_head_base'}
+{include file='_header'}
+        <!--========== END HEADER ==========-->
+        <!--========== PARALLAX ==========-->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="__STATIC__/img/1920x1080/01.jpg">
+            <div class="parallax-content container">
+                <h1 class="carousel-title">{$nav['name']}</h1>
+                <p>{$nav['description']}</p>
+            </div>
+        </div>
+        <!--========== PARALLAX ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- Our Exceptional Solutions -->
+        <div class="content-lg container">
+            <div class="row margin-b-50">
+                {foreach name='contentlist' item='item' key='k'}
+                <!-- Our Exceptional Solutions -->
+                <div class="col-sm-4 sm-margin-b-50">
+                    <div class="margin-b-20">
+                        <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                            <img class="img-responsive" src="{$item['thunb']}" alt="Our Exceptional Solutions Image">
+                        </div>
+                    </div>
+                    <h3><a href="{$item['url']}">{$item['title']}</a> <span class="text-uppercase margin-l-20">{$item['author']}</span></h3>
+                    <p>{$item['description']}</p>
+                    <a class="link" href="{$item['url']}">Read More</a>
+                </div>
+                <!-- End Our Exceptional Solutions -->
+                {/foreach}
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End Our Exceptional Solutions -->
+
+        <!-- Promo Section -->
+        <div class="promo-section overflow-h">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="ver-center">
+                        <div class="ver-center-aligned">
+                            <div class="promo-section-col">
+                                <h2>{$nav['name']}</h2>
+                                <p>{$nav['description']}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="promo-section-img-right">
+                <img class="img-responsive" src="__STATIC__/img/970x970/01.jpg" alt="Content Image">
+            </div>
+        </div>
+        <!-- End Promo Section -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+{include file='_footer'}

@@ -1,0 +1,111 @@
+{include file='_header_base'}
+<div class="wb-header" style="position: fixed;">
+    <div class="logo">
+        <img class='logo-img' src="{:isset($copyright['logo']) ? $copyright['logo'] : ''}" onerror="this.src='__IMG__/nologo.png'"/>
+    </div>
+    <ul>
+        <li class="">
+            <a href="{:url('admin/index/index')}">
+                <i class="fa fa-home"></i>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="active">
+            <a href="{:url('/admin/sysset/index')}">
+                <i class="fa fa-cube"></i>
+                <span>设置</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="{:url('/admin/system/index')}">
+                <i class="fa fa-laptop"></i>
+                <span>系统</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="{:url('/admin/content/index')}">
+                <i class="fa fa-list"></i>
+                <span>内容</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="{:url('/admin/column/index')}">
+                <i class="fa fa-th"></i>
+                <span>栏目</span>
+            </a>
+        </li>
+        <li class="">
+            <a href="{:url('/admin/extend/index')}">
+                <i class="fa fa-tags"></i>
+                <span>扩展</span>
+            </a>
+        </li>
+    </ul>
+    <div class="wb-header-flex"></div>
+    <ul>
+        <li data-toggle="tooltip" data-placement="bottom" title="">
+            <a href="{:url('admin/system/index')}"><i class="icow icow-syssetL"></i>系统管理</a>
+        </li>
+        <li class="dropdown auto ellipsis">
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{:isset($system['right_menu']) && $system['right_menu']['menu_title']}<span style="position: relative;"></span></a>
+            <ul class="dropdown-menu">
+                {foreach name="system['right_menu']['menu_items']" item='right_menu_item'}
+                    {if !is_array($right_menu_item)}
+                    {else}
+                        <li>
+                            <a href="{$right_menu_item['href']}" {if $right_menu_item['blank']}target="_blank"{/if}>
+                                <i class="icow {:isset($right_menu_item['icow']) ? $right_menu_item['icow'] : ''} " style="font-size: 30px;"></i>
+                                <span style="display: block">{$right_menu_item['text']}</span>
+                            </a>
+                        </li>
+                    {/if}
+                {/foreach}
+            </ul>
+        </li>
+        <li data-toggle="tooltip" data-placement="bottom" title="退出登陆" data-href="{$system['right_menu']['logout']}">
+            <a class="wb-header-logout"><i class="icow icow-exit"></i></a>
+        </li>
+    </ul>
+</div>
+
+<!-- 一级导航 -->
+<div class="wb-nav {if !empty($system['foldnav'])}fold{/if}">
+    <p class="wb-nav-fold"><i class="icow icow-zhedie"></i></p>
+    <ul>
+        {foreach name="sysmenus['menu']" item='sysmenu'}
+            <li {if !empty($sysmenu['active'])}class="active"{/if}>
+                <a href="{$sysmenu['url']}">
+                    {if $sysmenu['route']=='extend'}
+                    <svg class="iconplug" aria-hidden="true">
+                        <use xlink:href="#icow-yingyong3"></use>
+                    </svg>
+                    {else}
+                        {if !empty($sysmenu['icon'])}
+                            <i class="icow icow-{$sysmenu['icon']}" {if !empty($sysmenu['iconcolor'])} style="color: {$sysmenu['iconcolor']}"{/if}></i>
+                        {/if}
+                    {/if}
+                    {if $sysmenu['route'] == 'sysset'}
+                        <span class="wb-nav-title {if empty($notice_redis_click['notice_redis_click']) || !isset($notice_redis_click['notice_redis_click'])}point{/if}">{$sysmenu['text']}</span>
+                    {else}
+                        <span class="wb-nav-title">{$sysmenu['text']}</span>
+                    {/if}
+                </a>
+                <span class="wb-nav-tip">{$sysmenu['text']}</span>
+            </li>
+        {/foreach}
+    </ul>
+</div>
+
+<!-- 二级导航 -->
+{if !empty($no_left)}
+{else}
+{if !empty($sysmenus['submenu']['items'])}
+    <div class="wb-subnav">
+      <div style="width: 100%;height: 100%;overflow-y: auto">
+          {include file='_tabs'}
+          <div class="wb-subnav-fold icow"></div>
+      </div>
+    </div>
+{/if}
+{/if}
+<div class="wb-container right-panel">

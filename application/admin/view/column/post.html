@@ -1,0 +1,160 @@
+{include file='_header'}
+<div class="page-header">
+	当前位置：
+	<span class="text-primary">
+		{if !empty($item['id'])}编辑{else}添加{/if}栏目 <small>{if !empty($item['id'])}修改【{$item['name']}】{/if}</small>
+	</span>
+</div>
+<div class="page-content">
+	<div class="page-sub-toolbar">
+		<span class=''>
+			<a class="btn btn-primary btn-sm" href="{:url('admin/column/add')}">添加新栏目</a>
+		</span>
+	</div>
+<form action="" method="post" class="form-horizontal form-validate" enctype="multipart/form-data" >
+	{if !empty($parentid)}
+	<div class="form-group">
+		<label class="col-sm-2 control-label">上级栏目</label>
+		<div class="col-sm-9 col-xs-12 control-label" style="text-align:left;">
+			{if !empty($parent1)}{$parent1['name']} >> {/if}
+			{$parent['name']}</div>
+	</div>
+	{/if}
+	<div class="form-group">
+		<label class="col-sm-2 control-label">排序</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="sort" class="form-control" value="{$item['sort']}" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label must">栏目名称</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="name" class="form-control" value="{$item['name']}" data-rule-required='true' />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">列表页</label>
+		<div class="col-sm-9 col-xs-12">
+			<select class="form-control select2" name="list_type" data-rule-required='true'>
+	            <option value="">请选择列表页</option>
+	            {foreach name='list_types' item='list_type'}
+	                <option value="{$list_type}" {if $item['list_type']==$list_type} selected="selected"{/if}>{$list_type}</option>
+	            {/foreach}
+	        </select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">内容页</label>
+		<div class="col-sm-9 col-xs-12">
+			<select class="form-control select2" name="content_type" data-rule-required='true'>
+	            <option value="">请选择内容页</option>
+	            {foreach name='content_types' item='content_type'}
+	                <option value="{$content_type}" {if $item['content_type']==$content_type} selected="selected"{/if}>{$content_type}</option>
+	            {/foreach}
+	        </select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="sort" class="col-sm-2 control-label">分页数据</label>
+		<div class="col-sm-2">
+			<input type="number" name="page_number" value="{$item['page_number']}" class="form-control">
+		</div>
+	</div>
+	{if empty($parentid)}
+	<div class="form-group">
+		<label class="col-sm-2 control-label">栏目图标</label>
+		<div class="col-sm-9 col-xs-12">
+			{:tpl_form_field_image2('thumb', $item['thumb'])}
+			<span class="help-block">建议尺寸: 100*100，或正方型图片 </span>
+		</div>
+	</div>
+	{/if}
+	<div class="form-group">
+	    <label class="col-sm-2 control-label">栏目外链类型</label>
+	    <div class="col-sm-9 col-xs-12">
+	        <label class="radio-inline"><input type="radio" name="outlink_state" value="0" {if $item['outlink_state'] == '0'} checked {/if}/> 无</label>
+	        <label class="radio-inline"><input type="radio" name="outlink_state" value="1" {if $item['outlink_state'] == '1'} checked {/if}/> 栏目/内容</label>
+	        <label class="radio-inline"><input type="radio" name="outlink_state" value="2" {if $item['outlink_state'] == '2'} checked {/if}/> 外链</label>
+	    </div>
+	</div>
+	<div class="form-group choose choose_1" {if $item['outlink_state'] == '1'} style='display: block;' {else} style='display: none;' {/if}>
+	    <label class="col-sm-2 control-label">栏目/内容</label>
+		<div class="col-sm-9 col-xs-12">
+			<div class="input-group">
+				<input type="text" name="outlink1" class="form-control" value="{$item['outlink1']}" id="outlink1" />
+				<span data-input="#outlink1" data-toggle="selectUrl" class="input-group-addon btn btn-default">选择链接</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group choose choose_2" {if $item['outlink_state'] == '2'} style='display: block;' {else} style='display: none;' {/if}>
+	    <label class="col-sm-2 control-label">链接</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="outlink2" class="form-control" value="{$item['outlink2']}" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">开启单页</label>
+		<div class="col-sm-9 col-xs-12">
+			<label class='radio-inline'>
+				<input type='radio' name='page' value='1' {if $item['page']==1}checked{/if} /> 是
+			</label>
+			<label class='radio-inline'>
+				<input type='radio' name='page' value='0' {if $item['page']==0}checked{/if} /> 否
+			</label>
+		</div> 
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">是否显示</label>
+		<div class="col-sm-9 col-xs-12">
+			<label class='radio-inline'>
+				<input type='radio' name='status' value=1' {if $item['status']==1}checked{/if} /> 是
+			</label>
+			<label class='radio-inline'>
+				<input type='radio' name='status' value=0' {if $item['status']==0}checked{/if} /> 否
+			</label>
+		</div>
+	</div>
+	<div class="choosepage choosepage_1" {if $item['page'] == '1'} style='display: block;' {else} style='display: none;' {/if}>
+	<div class="form-group-title">单页内容</div>
+	<div class="form-group">
+		<label class="col-lg control-label must">封面图</label>
+		<div class="col-sm-9 col-xs-12">
+			{:tpl_form_field_image2('thumb', $item['thumb'])}
+			<span class="help-block">建议尺寸: 640*300，或正方型图片 </span>
+		</div>
+	</div>
+    <div class="form-group">
+        <label class="col-lg control-label must">简介</label>
+        <div class="col-sm-9 col-xs-12">
+            <textarea name="description" class="form-control richtext" rows="5">{$item['description']}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg control-label">详情</label>
+        <div class="col-sm-9 col-xs-12">
+            {:tpl_ueditor('body',$item['body'],array('height'=>'200'))}
+        </div>
+    </div>
+    </div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label"></label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="submit"  value="提交" class="btn btn-primary"/>
+			<input type="button" name="back" onclick='history.back()' style='margin-left:10px;' value="返回列表" class="btn btn-default" />
+		</div>
+	</div>
+</form>
+</div>
+<script type="text/javascript">
+	$(':radio[name=outlink_state]').click(function () {
+        var v = $(this).val();
+        $(".choose").hide();
+        $(".choose_" + v).show();
+    });
+    $(':radio[name=page]').click(function () {
+        var v = $(this).val();
+        $(".choosepage").hide();
+        $(".choosepage_" + v).show();
+    })
+</script>
+{include file='_footer'}
